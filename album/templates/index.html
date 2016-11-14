@@ -1,0 +1,20 @@
+{% load staticfiles %}
+
+<html>
+<head>
+<title> Sleeve </title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="{% static 'css/album.css' %}">
+</head>
+<body>
+  <div>
+    <h1> The album </h1>
+    {% for page in pages %}
+    <li>{{page.title}}</li>
+    <img src={{page.photo.url}}>
+    {% endfor %}
+  </div>
+</body>
+
+</html>
